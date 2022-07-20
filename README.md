@@ -8,3 +8,6 @@
 - 8080: Warehouse
 - 8081: ProductService
 - 8082: CurrencyService
+- 8083: PriceService
+---
+- 5672 & 15672: RabbitMQ
