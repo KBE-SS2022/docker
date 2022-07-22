@@ -5,9 +5,11 @@
 - Run `docker compose up`
 
 ### Ports
-- 8080: Warehouse
-- 8081: ProductService
-- 8082: CurrencyService
-- 8083: PriceService
+- 9000: API-Gateway
+- 9001: Warehouse
+- 9002: ProductService
+- 9003: PriceService
+- 9004: CurrencyService
+
 ---
 - 5672 & 15672: RabbitMQ
