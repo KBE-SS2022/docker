@@ -1,25 +1,5 @@
 version: "3.9"
 services:
-  rabbitmq:
-    container_name: rabbitmq
-    image: rabbitmq:3-management
-    ports:
-      - 5672:5672
-      - 15672:15672
-
-  gateway:
-    container_name: gateway
-    command: java -jar target/api-gateway-0.0.1-SNAPSHOT.jar
-    build:
-      context: api-gateway/
-      dockerfile: Dockerfile
-    ports:
-      - 9000:9000
-    volumes:
-      - ./:/app/app
-    depends_on:
-      - rabbitmq
-
   warehouse:
     container_name: warehouse
     command: java -jar target/demo-0.0.1-SNAPSHOT.jar
@@ -30,43 +10,3 @@ services:
       - 9001:9001 #host:container
     volumes:
       - ./:/app/app
-
-  productservice:
-    container_name: productService
-    command: java -jar target/product-0.0.1-SNAPSHOT.jar
-    build:
-      context: productService/
-      dockerfile: Dockerfile
-    ports:
-      - 9002:9002
-    volumes:
-      - ./:/app/app
-    depends_on:
-      - rabbitmq
-
-  priceservice:
-    container_name: priceService
-    command: java -jar target/PriceService-0.0.1-SNAPSHOT.jar
-    build:
-      context: priceService/
-      dockerfile: Dockerfile
-    ports:
-      - 9003:9003
-    volumes:
-      - ./:/app/app
-    depends_on:
-      - rabbitmq
-
-  currencyservice:
-    container_name: currencyService
-    command: java -jar target/currency-0.0.1-SNAPSHOT.jar
-    build:
-      context: currencyService/
-      dockerfile: Dockerfile
-    ports:
-      - 9004:9004
-    volumes:
-      - ./:/app/app
-    depends_on:
-      - rabbitmq
-      - gateway
