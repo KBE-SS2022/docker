@@ -13,4 +13,5 @@
 - 9004: CurrencyService
 
 ---
+- 8080: Keycloak
 - 5672 & 15672: RabbitMQ
