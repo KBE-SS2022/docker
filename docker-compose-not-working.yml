@@ -31,6 +31,7 @@ services:
       - ./:/app/app
     depends_on:
       - rabbitmq
+      - keycloak
 
   warehouse:
     container_name: warehouse
@@ -95,3 +96,5 @@ services:
       - ./:/app
       - node_modules:/app/node_modules
       - dist:/app/dist
+    depends_on:
+      - keycloak
