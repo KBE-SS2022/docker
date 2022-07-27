@@ -5,7 +5,12 @@
 - Run `docker compose up`
 - `docker-compose-not-working.yml` has problems with RabbitMQ
 
+### Hosts
+
+- localhost
+
 ### Ports
+- 8081: Frontend
 - 8090: API-Gateway
 - 9001: Warehouse
 - 9002: ProductService
