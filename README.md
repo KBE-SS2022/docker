@@ -15,3 +15,12 @@
 ---
 - 8080: Keycloak
 - 5672 & 15672: RabbitMQ
+
+### Keycloak
+
+- First start Keycloak with `docker-compose up` (it may take a while)
+- Log in at `localhost:8080` with username: admin, password: admin
+- Click on "Users" on the left side, then click on "Add user" on the right
+- Enter username "user" and click save
+- Click on "Credentials" and set the password "user", turn off the "Temporary" Slider!
+- Click on Role Mappings and add Role "user" to "Assigned Roles"
