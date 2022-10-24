@@ -1,9 +1,11 @@
 # How to use docker compose
 
-- The `docker-compose.yml` should be in the same folder as all other services
-- Run `docker compose build`
-- Run `docker compose up`
-- `docker-compose-not-working.yml` has problems with RabbitMQ
+- The `docker-compose.yml` should be in the same folder as all other services together with the `/imports` folder
+- Run `docker compose up --build`
+  
+Note: 
+- **Keycloak** does not work in Docker and should run locally
+- **Frontend** is also not included in Docker
 
 ### Hosts
 
